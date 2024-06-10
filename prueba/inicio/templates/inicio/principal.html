@@ -1,9 +1,25 @@
-{% extends "inicio/encabezado.html" %}
-
-{% block titulo %}
- Principal 
-{% endblock %}
+{% extends "inicio/encabezado.html" %} 
+{% block titulo %} Principal {% endblock%}
+{% block imagen %}
+{% load static %}
+{% static "inicio/img/home.png" %}
+{% endblock imagen %}
+{% block tituloModulo %}
+Principal
+{% endblock tituloModulo %}
 
 {% block contenido %}
-<h1>Hola DJango</h1>
-{% endblock  %}
+
+<!-- Contenido Principal-->
+<div class="page-content">
+  <!--Encabezdo -->
+  <div class="page-header">
+    <div class="page-title">
+      <h3>Alumnos <small>Lista de Alumnos </small></h3>
+    </div>
+  </div>
+  <!-- /Encabezado-->
+</div>
+<!-- /Contenido Principal-->
+ 
+{% endblock %}

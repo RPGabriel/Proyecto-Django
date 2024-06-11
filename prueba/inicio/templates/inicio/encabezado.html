@@ -58,7 +58,7 @@
 				<a href="#">
 					<img src="{% block imagen %}{% endblock imagen %}" alt="user image">
 					<div class="user-info">
-						{% block tituloModulo %}{% endblock tituloModulo %} <span>DSM</span>
+						{% block tituloModulo %}{% endblock tituloModulo %} <span>{% block spanModulo %}{% endblock spanModulo %}</span>
 					</div>
 				</a>
 			</div>
@@ -75,11 +75,36 @@
 		<!-- /sidebar -->
 	
 	</div>
-
+<!-- Contenido Principal-->
+<div class="page-content">
+	<!--Encabezdo -->
+	<div class="page-header">
+  		<div class="page-title">
+    		<h3>{% block tituloHeader %}{% endblock tituloHeader %}
+				<small>{% block spanHeader %}{% endblock spanHeader %}</small>
+			</h3>
+  		</div>
+	</div>
+	<div class="breadcrumb-line">
+	   <ul class="breadcrumb">
+		   <a href="{% url "Principal" %}">
+			   {% if request.path == '/' %}
+				   Principal
+			   {% else %}
+				   Principal{{request.path}}
+			   {% endif %}
+		   </a>
+	   </ul>
+	</div>
+<!-- /Encabezado-->
 	 <!-- Contenido -->
 	 {% block contenido %}
 	 <!-- block sirve para indicar que colocaremos un bloque de contenido a traves de nuestra variable content-->
 	 {% endblock %}
+
+
+</div>
+{% comment %} contenido principal {% endcomment %}
 	 
 </body>
 </html>

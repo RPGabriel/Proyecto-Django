@@ -1,23 +1,26 @@
 {% extends "inicio/encabezado.html" %} 
 {% block titulo %} Contacto {% endblock%} 
+
 {% block imagen %}
 {% load static %}
 {% static "inicio/img/contacto.png" %}
 {% endblock imagen %}
+
 {% block tituloModulo %}
 Contacto
 {% endblock tituloModulo %}
+{% block spanModulo %}
+contacto
+{% endblock spanModulo %}
+
+{% block tituloHeader %}
+Contacto
+{% endblock tituloHeader %}
+{% block spanHeader %}
+Ingresa tu información
+{% endblock spanHeader %}
 
 {% block contenido %}
-<!-- Contenido Principal-->
-<div class="page-content">
-  <!--Encabezdo -->
-  <div class="page-header">
-    <div class="page-title">
-      <h3>Contacto <small>Ingresa tus datos</small></h3>
-    </div>
-  </div>
-  <!-- /Encabezado-->
 
   <!-- Formulario -->
   <form class="form-horizontal" action="#" role="form">
@@ -44,6 +47,5 @@ Contacto
     </div>
   </form>
   <!-- Fin del Formulario -->
-</div>
-<!-- /Contenido Principal-->
+
 {% endblock %}
